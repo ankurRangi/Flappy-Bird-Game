@@ -13,12 +13,16 @@ public class PipeMoveScript : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {   
+        // if (logic.playerScore < logic.playerScore + 5)
+        // {
+        //     moveSpeed = moveSpeed + 5;
+        // }
         transform.position = transform.position + (Vector3.left * moveSpeed) * Time.deltaTime;
 
         if (transform.position.x < deadZone)
         {
-            Debug.Log("Pipe Deleted");
+            // Debug.Log("Pipe Deleted");
             Destroy(gameObject);
         }
     }

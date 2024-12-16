@@ -18,11 +18,10 @@ public class MiddlePipeScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {   
-        int score = 1;
         // Future proofing - Collision was with the Bird only (check layer in bird component)
         if (collision.gameObject.layer == 3)
         {
-            logic.addScore(score);
+            logic.addScore(1);
         }
     }
 }
